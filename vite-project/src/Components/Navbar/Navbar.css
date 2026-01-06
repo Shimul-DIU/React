@@ -1,0 +1,33 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.nav{
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(10, 22, 112);
+    font-size:large;
+    align-items: center;
+   
+    
+    
+}
+.nav a{
+    padding:10px;
+    color:white;
+    text-decoration: none;
+     border-bottom: 4px solid  transparent;
+    
+    
+}
+.nav div input{
+    border-radius: 5px;
+    padding:4px
+}
+.nav a:hover{
+    background-color: rgb(33, 67, 123);
+    border-bottom:3px solid white;
+    
+    
+}

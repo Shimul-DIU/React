@@ -1,20 +1,18 @@
-import Header from './Components/Header/Header'
-import Footer from './Components/Footer/Footer'
+import React from 'react';
+import Header from './Components/Header/Header';
+import Navber from './Components/Navbar/Navber';
 
-function App() {
- let student={
-    name:'mustafa',
-    roll:10,
-    cgpa:3.67
- }
+
+const App = () => {
+  const objarray=[{name:'shimul',roll:8,gpa:4.50},{name:'mustafa',roll:6,gpa:5}]
 
   return (
-    <>
-       
-      <Header name='shimul' roll='9' cgpa='3.56' info={student}></Header>
-      <Footer></Footer>
-    </>
-  )
-}
+    <div>
+     <Navber objarray={objarray}></Navber>
+      <Header></Header>
 
-export default App
+    </div>
+  );
+};
+
+export default App;
