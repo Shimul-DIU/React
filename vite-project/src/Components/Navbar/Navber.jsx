@@ -1,10 +1,10 @@
 import React from 'react';
-import './Navbar.css'
+// import './Navbar.css'
 
 const Navber = (props) => {
     return (
         <div>
-            <div className='nav'>
+            <div className='flex justify-around bg-blue-500 p-4 text-xl'>
                 <a href="">Home</a>
                 <div><input type="search" name="" placeholder='Search' id="" /></div>
                 <a href="">Contact</a>
