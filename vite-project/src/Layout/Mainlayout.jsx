@@ -5,15 +5,24 @@ import Section from '../Components/Section/Section';
 import Article from '../Components/Article/Article'; 
 import Footer from '../Components/Footer/Footer';
 import  Aside from '../Components/Aside/Aside';
+import { Outlet } from 'react-router-dom';
 
 const Mainlayout = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             <Header></Header>
             <Navbar></Navbar>
-            <Section></Section>
-            <Article></Article>
-            <Aside></Aside>
+                <div className='flex justify-around'>
+                <div className='w-1/4'>
+                    <Section></Section>
+                    <Article></Article>
+                </div>
+                <Aside>
+                    <Outlet></Outlet>   
+                </Aside>
+               
+            </div>
+
             <Footer></Footer>
         </div>
     );

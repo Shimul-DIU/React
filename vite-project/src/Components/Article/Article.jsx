@@ -4,7 +4,7 @@ const Article = () => {
     return (
         <div>
             hello from artical
-            <h1>htello</h1>
+        
         </div>
        
     );

@@ -6,9 +6,9 @@ import Mainlayout from './Layout/Mainlayout';
 const App = () => {
   
   return (
-    <div>
+    <div >
         <Mainlayout></Mainlayout>
-        <Outlet></Outlet>
+        
     </div>
   );
 };

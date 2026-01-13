@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './../../src/Components/Header/Header';
-
 const Servises = () => {
     return (
         <div>

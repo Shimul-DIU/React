@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Aside = () => {
+const Aside = ({ children }) => {
     return (
         <div>
-            hi  from aside section
-            will be exist
+            {children}
         </div>
     );
 };
