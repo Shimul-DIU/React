@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Artical = () => {
+const Article = () => {
     return (
         <div>
             hello from artical
@@ -10,4 +10,4 @@ const Artical = () => {
     );
 };
 
-export default Artical;
+export default Article;
