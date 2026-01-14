@@ -6,12 +6,13 @@ import Article from '../Components/Article/Article';
 import Footer from '../Components/Footer/Footer';
 import  Aside from '../Components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
-
+import Product from '../Components/Product/Product';   
 const Mainlayout = () => {
     return (
         <div className='min-h-screen'>
             <Header></Header>
             <Navbar></Navbar>
+            <Product></Product>
                 <div className='flex justify-around'>
                 <div className='w-1/4'>
                     <Section></Section>
