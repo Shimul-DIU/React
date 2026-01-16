@@ -15,29 +15,29 @@ let router=createBrowserRouter(
       element:<App></App>,
       children:[
         {
-      path:'/Home',
+      path:'home',
       element:<Home></Home>
     },
     {
-      path:'/Products',
-      loader:()=>fetch('allProducts.json'),
+      path:'products',
+      loader:()=>fetch('https://fakestoreapi.com/products'),
       element:<Products></Products>
     },
     {
-      path:'/product/:id',
-      loader:({params})=>fetch(`allProducts.json/${params.id}`),
+      path:'product/:id',
+      loader:({params})=>fetch(`https://fakestoreapi.com/products/${params.id}`),
       element:<Product></Product>
     },
         {
-      path:'/Contact',
+      path:'contact',
       element:<Contact></Contact>
     },
     {
-      path:'/AboutUs',
+      path:'aboutus',
       element:<AboutUs></AboutUs>
     },
     {
-      path:'/Servises',
+      path:'servises',
       element:<Servises></Servises>
     }
       ]

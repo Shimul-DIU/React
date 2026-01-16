@@ -8,10 +8,10 @@ const Products = () => {
         <div className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4'>
             {
            productsInfo.map((product)=>{
-            const{id,title,description,category,image,rating,price}=product;
+            const{id,description,category,image,rating,price}=product;
            
             return(
-                <div key={id} className=' border-2 m-4 p-4'>
+                <div className=' border-2 m-4 p-4'>
                    
                     <img src={image} alt=""  />
                   
@@ -21,7 +21,7 @@ const Products = () => {
                     <p>{price}</p>
                     <br /><br />
                     
-                    <Link to={`/product/${id}`}>order now</Link>
+                    <Link to={`/product/${id}`} className='border p-4 bg-blue-600'>order now</Link>
                    
                 </div>
             
