@@ -8,6 +8,7 @@ import Servises from './pages/Servises/Servises.jsx';
 import Home from './pages/Home/Home.jsx';
 import Products from './pages/Products/Products.jsx';
 import Product from './Components/Product/Product.jsx';
+import Loginform from './Components/Loginform/Loginform.jsx';
 let router=createBrowserRouter(
   [
     {
@@ -17,6 +18,11 @@ let router=createBrowserRouter(
         {
       path:'home',
       element:<Home></Home>
+    },
+    {
+      path:'loginform',
+      element:<Loginform></Loginform>
+
     },
     {
       path:'products',

@@ -6,6 +6,7 @@ import Article from '../Components/Article/Article';
 import Footer from '../Components/Footer/Footer';
 import  Aside from '../Components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
+
 const Mainlayout = () => {
 
     return (
