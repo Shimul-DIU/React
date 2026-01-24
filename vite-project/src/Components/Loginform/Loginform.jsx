@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
 
+import Header from './../Header/Header';
 const Loginform = () => {
-    let navigate=useNavigate()
-    let [message,setMessage]=useState(null);
-    let [color,setColor]=useState(false)
-   const Myform=(e)=>{
-        e.preventDefault();
-        let name=e.target.username.value
-        let password=e.target.password.value
-        navigate('/')
-    
-        if (password.length<6){
-            setMessage('password must be 6 character')
-            setColor(false)
-            
-            return;
-            
-        }
-        else{
-            console.log(name)
-            console.log(password)
-            setMessage(null)
-        }
-        e.target.reset();
-    }
     return (
-        <div className='border p-4 m-4'>
-            <form action="" onSubmit={Myform}>
-               Username:
-                <input type="text" className='border ps-2'  placeholder='username' name='username' required/>
-                <br />
-                <br />
-                
-                password: <input className={`border ${color?'border-2 border-red-500':''}`} name='password'  type="password" placeholder='password' />
-               <p className='text-red-500   text-center border rounded-sm p-0.5 mt-0.5 border-black'>{message}</p><br />
-                <button className='block mx-auto border ' type="submit">submit</button>
-                
+        <div>
+            <form action="" className="grid bg-white px-5 pb-10 pt-1.5  gap-5 m-5 rounded">
+                <button className=' border  flex justify-end'>
+                    <svg className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </button>
+                <h1 className='text-4xl font-medium text-center'>Login form</h1>
+                <div >
+                    <label htmlFor="username" >Username: </label>
+                    <input type="text"  placeholder='Username'name='username'id='username' className='border_style pl-1.5'/>   
+                </div>
+                <div >
+                    <label htmlFor="password">Password: </label> 
+                    <input type="password" name="password" id="password" className="border_style pl-1.5" placeholder='Password'/>       
+                </div>
+                <input type="submit" className="hover:cursor-pointer rounded px-2 py-1 bg-blue-500 text-white " ></input>
+                          
             </form>
         </div>
     );

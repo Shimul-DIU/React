@@ -11,14 +11,14 @@ const Mainlayout = () => {
 
     return (
         <ContextProvider >
-        <div className='min-h-screen'>
+        <div >
             
                 
                 <Header></Header>
                 <Navbar></Navbar>
                 
                     <div className='flex justify-around'>
-                    <div className='w-1/4'>
+                    <div >
                         <Section></Section>
                         <Article></Article>
                     </div>

@@ -1,1 +1,20 @@
 @import "tailwindcss";
+input::placeholder{
+    font-style: italic;
+
+}
+.border_style{
+    border:2px solid black;
+    outline:none;
+    border-radius: 5px;
+    
+}
+input:focus{
+    border-color:blue;
+}
+body{
+   background-color: rgb(216, 207, 207);
+   opacity: 0.8;
+    
+    
+}
