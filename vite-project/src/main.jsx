@@ -26,12 +26,26 @@ let router=createBrowserRouter(
     },
     {
       path:'products',
-      loader:()=>fetch('https://fakestoreapi.com/products'),
-      element:<Products></Products>
+      loader:async()=>
+        {
+          let data=await fetch('https://fakestoreapi.com/products')
+          
+          if (!data.ok){
+            throw new Error('faild to load product');
+          }
+          return data.json();
+        },
+      element:<Products></Products>,
+     errorElement:<h1>faild  to data load</h1>
+        
     },
     {
       path:'product/:id',
-      loader:({params})=>fetch(`https://fakestoreapi.com/products/${params.id}`),
+      loader:async({params})=>
+        {
+        let data=  await fetch(`https://fakestoreapi.com/products/${params.id}`)
+          return data.json();
+        },
       element:<Product></Product>
     },
         {

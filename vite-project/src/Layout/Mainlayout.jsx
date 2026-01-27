@@ -1,4 +1,3 @@
-import ContextProvider  from '../Components/Contexts/CountContext';
 import Header from '../Components/Header/Header';
 import Navbar from '../Components/Navbar/Navbar';
 import Section from '../Components/Section/Section';
@@ -6,14 +5,13 @@ import Article from '../Components/Article/Article';
 import Footer from '../Components/Footer/Footer';
 import  Aside from '../Components/Aside/Aside';
 import { Outlet } from 'react-router-dom';
+import ContextProvider from '../store/Contexts/CountContext'
 
 const Mainlayout = () => {
 
     return (
-        <ContextProvider >
-        <div >
-            
-                
+        <div>
+            <ContextProvider>
                 <Header></Header>
                 <Navbar></Navbar>
                 
@@ -29,9 +27,9 @@ const Mainlayout = () => {
                 </div>
 
                 <Footer></Footer>
-           
-        </div>
-         </ContextProvider>
+    
+            </ContextProvider>   
+            </div> 
     );
 };
 
