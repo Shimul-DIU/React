@@ -1,14 +1,14 @@
-import { useState} from 'react';
+import React, { useState } from 'react';
 import { Countcontext } from './Context';
 
-const ContextProvider = ({children}) => {
-    const [count,setCount]=useState(0);
-    return (
-      <div>
-        <Countcontext.Provider value={[count,setCount]}>
-        {children}
-       </Countcontext.Provider>
-      </div>
-    );
+const ContextProvider = ({ children }) => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <Countcontext.Provider value={[count, setCount]}>
+      {children}
+    </Countcontext.Provider>
+  );
 };
+
 export default ContextProvider;
