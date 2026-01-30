@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from 'react';
 import Header from './../Header/Header';
 
@@ -13,8 +13,7 @@ const Loginform = () => {
        if (!showform) {
   return null;
 }
-
-            
+      
     return (
         <div>
             <form action="" className="flex flex-col space-y-5 bg-white px-5 pb-10 pt-1.5 m-5 rounded">

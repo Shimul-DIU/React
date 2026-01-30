@@ -1,8 +1,8 @@
-import { StrictMode } from 'react'
-
-import { createRoot } from 'react-dom/client'  
-import App from './App.jsx'
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import { StrictMode } from 'react';
+import React from 'react';
+import { createRoot } from 'react-dom/client';  
+import App from './App.jsx';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Contact from './pages/Contact/Contact.jsx';
 import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import Servises from './pages/Servises/Servises.jsx';
