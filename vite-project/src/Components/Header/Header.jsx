@@ -1,13 +1,14 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun ,faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import Parent from '../Parentcomponent/Parent';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 
 
 const Header = () => {
+    let students=[{name:'shimul',roll:5,cgpa:4},{name:'mustafa',roll:6,divition:'dhaka'}]
 //    const [count,setCount]=useContext(Context1)
     let [light,setLight]=useState(false);
     const Color={
@@ -24,6 +25,9 @@ const Header = () => {
             <FontAwesomeIcon style={Color} onClick={ColorChange} className='text-3xl border' icon={faLightbulb} />
             <Parent></Parent>
             <Link className='border p-2 bg-blue-400' to={'/loginform'}>login</Link>
+            {students.map((student, index) => (
+                <Navbar key={index} students={[student]}></Navbar>
+            ))}
         </div>
     );
 };
