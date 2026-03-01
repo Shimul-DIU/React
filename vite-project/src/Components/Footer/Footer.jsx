@@ -1,8 +1,11 @@
-import React from "react";
+import React, { use, useState } from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  let [count,setCount]=useState(0)
+  
   return (
+   
     <div className="footer">
       <div className="header">
         <div>Shimul</div>
@@ -17,6 +20,9 @@ const Footer = () => {
       <hr />
         <p>&copy;Copyright 2023-25 Md.Shimul </p>
       
+      <h1 className="text-2xl">{count}</h1>
+      <button onClick={()=>setCount(count+1)}>inncrease</button>
+      <button onClick={()=>setCount(prev=>prev-1)}>decrease</button>
       
     </div>
   );

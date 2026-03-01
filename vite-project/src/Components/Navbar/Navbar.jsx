@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import './Navbar.css'
 
-const Navbar = ({ students }) => {
+const Navbar = () => {
     
     return (
         <div>
@@ -15,10 +15,10 @@ const Navbar = ({ students }) => {
                 <Link to={'/Servises'}>Servises</Link>
                 
             </div>
-            <h1>{students[0].name}</h1>
+            {/* <h1>{students[0].name}</h1>
             <h1>{students[0].roll}</h1>
             <h1>{students[0].cgpa}</h1>
-               
+                */}
             
         </div>
     );
