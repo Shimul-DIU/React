@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import React from 'react';
-import { createRoot } from 'react-dom/client';  
+import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Contact from './pages/Contact/Contact.jsx';
@@ -10,6 +10,7 @@ import Home from './pages/Home/Home.jsx';
 import Products from './pages/Products/Products.jsx';
 import Product from './Components/Product/Product.jsx';
 import Loginform from './Components/Loginform/Loginform.jsx';
+import Article from './Components/Article/Article.jsx';
 let router=createBrowserRouter(
   [
     {
@@ -30,7 +31,7 @@ let router=createBrowserRouter(
       loader:async()=>
         {
           let data=await fetch('https://fakestoreapi.com/products')
-          
+
           if (!data.ok){
             throw new Error('faild to load product');
           }
@@ -38,7 +39,7 @@ let router=createBrowserRouter(
         },
       element:<Products></Products>,
      errorElement:<h1>faild  to data load</h1>
-        
+
     },
     {
       path:'product/:id',
@@ -63,7 +64,11 @@ let router=createBrowserRouter(
     }
       ]
     },
-    
+    {
+      path:'/article',
+      element:<Article></Article>
+    }
+
   ]
 )
 createRoot(document.getElementById('root')).render(

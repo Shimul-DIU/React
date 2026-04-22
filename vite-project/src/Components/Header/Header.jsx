@@ -13,7 +13,8 @@ const Header = () => {
 //    const [count,setCount]=useContext(Context1)
     let [light,setLight]=useState(false);
     const Color={
-        color:light? "blue" : "gray"    }
+        color:light? "blue" : "gray"  
+      }
         const ColorChange=()=>{
             setLight(!light)
         }
