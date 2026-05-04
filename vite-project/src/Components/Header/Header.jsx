@@ -8,12 +8,12 @@ import Navbar from '../Navbar/Navbar';
 
 
 const Header = () => {
-   
+
     // let students=[{name:'shimul',roll:5,cgpa:4},{name:'mustafa',roll:6,divition:'dhaka'}]
 //    const [count,setCount]=useContext(Context1)
     let [light,setLight]=useState(false);
     const Color={
-        color:light? "blue" : "gray"  
+        color:light? "blue" : "gray"
       }
         const ColorChange=()=>{
             setLight(!light)
@@ -23,14 +23,16 @@ const Header = () => {
 
             {/* <button onClick={()=>setCount(count+1)}>count :{count}</button> */}
              <FontAwesomeIcon icon={faSun} />
-             
+
             <FontAwesomeIcon style={Color} onClick={ColorChange} className='text-3xl border' icon={faLightbulb} />
             <Parent></Parent>
             <Link className='border p-2 bg-blue-400' to={'/loginform'}>login</Link>
             {/* {students.map((student, index) => (
                 <Navbar key={index} students={[student]}></Navbar>
             ))} */}
-           
+
+            <Link to={'/registration'} className='border p-2 bg-green-400'>Registration</Link>
+
         </div>
     );
 };

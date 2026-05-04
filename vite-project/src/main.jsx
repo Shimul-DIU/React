@@ -11,6 +11,7 @@ import Products from './pages/Products/Products.jsx';
 import Product from './Components/Product/Product.jsx';
 import Loginform from './Components/Loginform/Loginform.jsx';
 import Article from './Components/Article/Article.jsx';
+import Registration from './Components/Registration.jsx';
 let router=createBrowserRouter(
   [
     {
@@ -53,6 +54,10 @@ let router=createBrowserRouter(
         {
       path:'contact',
       element:<Contact></Contact>
+    },
+    {
+      path:'registration',
+      element:<Registration></Registration>
     },
     {
       path:'aboutus',
